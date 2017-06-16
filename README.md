@@ -7,14 +7,16 @@ Intended to work across Vim and NeoVim.
 
 ## Installation
 ### Vim
-Clone this repo somewhere and make your `~/.vimrc` a symlink to `init.vim`:
+- Clone this repo somewhere and make symlink from `~/.vimrc` to `init.vim`:
 ``` sh
 git clone https://github.com/jcqvisser/vim-config.git ~/.config/nvim`
 ln -sf ~/.config/nvim/init.vim ~/.vimrc
 ```
+- Edit `$setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
 
 ### NeoVim
 Clone this repo into the nvim config folder:
 ``` sh
 git clone https://github.com/jcqvisser/vim-config.git ~/.config/nvim`
 ```
+- Edit `$setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
