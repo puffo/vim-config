@@ -20,9 +20,9 @@ source ./plugin_setup/fzf.vim
 source ./plugin_setup/nerdtree.vim
 
 " Other setup
-source ./keymappings.vim
-source ./syntax_tweaks.vim
-source ./looks.vim
-source ./ruby_stuff.vim
-source ./misc.vim
+source ./setup/keymappings.vim
+source ./setup/syntax_tweaks.vim
+source ./setup/looks.vim
+source ./setup/ruby_stuff.vim
+source ./setup/misc.vim
 
