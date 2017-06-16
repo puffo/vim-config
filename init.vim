@@ -1,6 +1,7 @@
 source ./setup/nvim_fixes.vim
 source ./setup/neccesities.vim
 source ./setup/install_plug.vim
+source ./setup/keymappings.vim
 
 " Plug
 " installed to  ~/.local/share/nvim/site/autoload/plug.vim
@@ -16,12 +17,11 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " Setup plugins
+source ./plugin_setup/nerdtree.vim
 source ./plugin_setup/bufexplorer.vim
 source ./plugin_setup/fzf.vim
-source ./plugin_setup/nerdtree.vim
 
 " Other setup
-source ./setup/keymappings.vim
 source ./setup/syntax_tweaks.vim
 source ./setup/looks.vim
 source ./setup/ruby_stuff.vim
