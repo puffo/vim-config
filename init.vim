@@ -1,4 +1,5 @@
 source ./nvim_fixes.vim
+source ./neccesities.vim
 
 " Plug
 " installed to  ~/.local/share/nvim/site/autoload/plug.vim
@@ -19,7 +20,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 call plug#end()
 
-source ./neccesities.vim
 source ./keymappings.vim
 source ./syntax_tweaks.vim
 source ./looks.vim
