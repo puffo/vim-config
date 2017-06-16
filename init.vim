@@ -1,9 +1,11 @@
 " Basic setup
-source ./setup/nvim_fixes.vim
-source ./setup/neccesities.vim
-source ./setup/install_plug.vim
-source ./setup/keymappings.vim
-source ./setup/git_commit_settings.vim
+let $setup_path = '~/.config/nvim'
+
+source $setup_path/setup/nvim_fixes.vim
+source $setup_path/setup/neccesities.vim
+source $setup_path/setup/install_plug.vim
+source $setup_path/setup/keymappings.vim
+source $setup_path/setup/git_commit_settings.vim
 
 call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -17,13 +19,13 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " Setup plugins
-source ./plugin_setup/nerdtree.vim
-source ./plugin_setup/bufexplorer.vim
-source ./plugin_setup/fzf.vim
+source $setup_path/plugin_setup/nerdtree.vim
+source $setup_path/plugin_setup/bufexplorer.vim
+source $setup_path/plugin_setup/fzf.vim
 
 " Other setup
-source ./setup/syntax_tweaks.vim
-source ./setup/looks.vim
-source ./setup/ruby_stuff.vim
-source ./setup/misc.vim
+source $setup_path/setup/syntax_tweaks.vim
+source $setup_path/setup/looks.vim
+source $setup_path/setup/ruby_stuff.vim
+source $setup_path/setup/misc.vim
 
