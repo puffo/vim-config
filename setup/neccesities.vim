@@ -16,3 +16,10 @@ set nowritebackup
 set noswapfile
 set noundofile
 
+" CLIPBOARD FIX
+if has('mac')
+	set clipboard=unnamed
+elseif has('unix')
+	"more might be required
+	set clipboard=unnamedplus
+end
