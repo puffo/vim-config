@@ -1,10 +1,9 @@
+" Basic setup
 source ./setup/nvim_fixes.vim
 source ./setup/neccesities.vim
 source ./setup/install_plug.vim
 source ./setup/keymappings.vim
 
-" Plug
-" installed to  ~/.local/share/nvim/site/autoload/plug.vim
 call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'tpope/vim-fugitive'
