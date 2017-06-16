@@ -31,3 +31,8 @@ map <leader>bd :bd<CR>
 if has("nvim")
   tnoremap <C-Esc> <C-\><C-n>
 endif
+
+" VIMRC
+" Taken from http://learnvimscriptthehardway.stevelosh.com/chapters/07.html
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
