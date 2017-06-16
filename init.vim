@@ -3,6 +3,7 @@ source ./setup/nvim_fixes.vim
 source ./setup/neccesities.vim
 source ./setup/install_plug.vim
 source ./setup/keymappings.vim
+source ./setup/git_commit_settings.vim
 
 call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
