@@ -1,4 +1,4 @@
-# Personal Vim Setup
+# Personal Vim Config
 
 Intended to work across Vim and NeoVim.
 - Makes use of [Plug](https://github.com/junegunn/vim-plug) to manage plugins. Plug should be installed on startup if you don't have it installed.
