@@ -2,7 +2,14 @@
 command! Af %s/  \( *\)\(\(scenario\)\|\(test\)\)/  \1focus\r  \1\2/g | w
 command! Rf %s/   *focus\n//g | w
 
-" Insert ends
-autocmd Filetype ruby :iabbrev <buffer> if if<CR>end<ESC>pA
+" add an end when typing if
+autocmd Filetype ruby :iabbrev <buffer> if if<CR>end<up>
+
+" add pipes and end when typing do
+func RemoveNextChar()
+  call getchar()
+  return ''
+endfunc
+autocmd Filetype ruby :iabbr <buffer> do do \|\|<CR>end<ESC>k$i<C-R>=RemoveNextChar()<cr>
 
 
