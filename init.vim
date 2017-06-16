@@ -7,7 +7,7 @@ command! -nargs=1 Setup call CurrySauce(<q-args>, "setup")
 command! -nargs=1 SetupPlugin call CurrySauce(<q-args>, "plugin_setup")
 
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin(g:setup_path . '/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'tpope/vim-fugitive'
   Plug 'slim-template/vim-slim'
