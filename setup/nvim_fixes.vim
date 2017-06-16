@@ -1,5 +1,5 @@
 " FIX COLOR DISPLAY
-if(has("nvim"))
+if has("nvim") 
   set fillchars+=vert:\ 
   "Credit joshdick
   "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.

@@ -2,7 +2,7 @@
 
 Intended to work across Vim and NeoVim.
 - Makes use of [Plug](https://github.com/junegunn/vim-plug) to manage plugins. Plug should be installed on startup if you don't have it installed.
-- Uses [FZF](https://github.com/junegunn/fzf) and [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)for finding stuff.
+- Uses [FZF](https://github.com/junegunn/fzf) and [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) for finding stuff.
   - With some confguration appropriated from [zenbro](https://github.com/zenbro/dotfiles/blob/master/.nvimrc)
 
 ## Installation
