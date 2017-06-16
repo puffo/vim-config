@@ -1,4 +1,7 @@
 " Settings for editing git commits
 
-autocmd FileType gitcommit set spell 
+augroup git_settings
+  autocmd!
+  autocmd FileType gitcommit set spell 
+augroup END
 

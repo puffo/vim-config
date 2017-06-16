@@ -6,8 +6,11 @@ set nowrap
 set nocompatible
 
 " REMOVE WHITESPACE
-let blacklist = ['vim']
-autocmd BufWritePre * if index(blacklist, &ft) < 0 | autocmd BufWritePre <buffer> %s/\s\+$//e
+let filetypes_not_to_remove_whitespace_from= ['vim']
+augroup neccesities
+  autocmd!
+  autocmd BufWritePre * if index(filetypes_not_to_remove_whitespace_from, &ft) < 0 | autocmd BufWritePre <buffer> %s/\s\+$//e
+augroup END
 
 " IRRESPONSIBLE
 " prevents writing ~other~ files
