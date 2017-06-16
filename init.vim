@@ -1,11 +1,11 @@
-" Basic setup
-let $setup_path = '~/.config/nvim'
+let g:setup_path = '~/.config/nvim'
 
-source $setup_path/setup/nvim_fixes.vim
-source $setup_path/setup/neccesities.vim
-source $setup_path/setup/install_plug.vim
-source $setup_path/setup/keymappings.vim
-source $setup_path/setup/git_commit_settings.vim
+function CurrySauce(file, setup_file)
+  exec "source" . g:setup_path . "/" . a:setup_file . "/" . a:file . ".vim"
+endfunction
+command! -nargs=1 Setup call CurrySauce(<q-args>, "setup")
+command! -nargs=1 SetupPlugin call CurrySauce(<q-args>, "plugin_setup")
+
 
 call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -18,14 +18,18 @@ call plug#begin('~/.config/nvim/plugged')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 call plug#end()
 
-" Setup plugins
-source $setup_path/plugin_setup/nerdtree.vim
-source $setup_path/plugin_setup/bufexplorer.vim
-source $setup_path/plugin_setup/fzf.vim
+Setup nvim_fixes
+Setup neccesities
+Setup install_plug
+Setup keymappings
+Setup git_commit_settings
+Setup looks
+Setup syntax_tweaks
+Setup ruby_stuff
+Setup misc
 
-" Other setup
-source $setup_path/setup/syntax_tweaks.vim
-source $setup_path/setup/looks.vim
-source $setup_path/setup/ruby_stuff.vim
-source $setup_path/setup/misc.vim
+SetupPlugin nerdtree
+SetupPlugin bufexplorer
+SetupPlugin fzf
+
 

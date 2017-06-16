@@ -12,11 +12,11 @@ Intended to work across Vim and NeoVim.
 git clone https://github.com/jcqvisser/vim-config.git ~/.config/nvim`
 ln -sf ~/.config/nvim/init.vim ~/.vimrc
 ```
-- Edit `$setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
+- Edit `g:setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
 
 ### NeoVim
 Clone this repo into the nvim config folder:
 ``` sh
 git clone https://github.com/jcqvisser/vim-config.git ~/.config/nvim`
 ```
-- Edit `$setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
+- Edit `g:setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
