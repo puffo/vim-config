@@ -1,5 +1,6 @@
-source ./nvim_fixes.vim
-source ./neccesities.vim
+source ./setup/nvim_fixes.vim
+source ./setup/neccesities.vim
+source ./setup/install_plug.vim
 
 " Plug
 " installed to  ~/.local/share/nvim/site/autoload/plug.vim
