@@ -3,28 +3,30 @@ command! Af %s/  \( *\)\(\(scenario\)\|\(test\)\)/  \1focus\r  \1\2/g | w
 command! Rf %s/   *focus\n//g | w
 
 " Add/Remove focus from minitest around cursor
+let s:test_words = ["test \"", "def test_\\w", "scenario\ \"", "test '"]
+let s:decorator = "focus"
 function! AddFocusHere()
-  let view = winsaveview()
-  let test_line = search('  \(def test_\w\)\|\(test\ \"\)\|\(scenario\ \"\)', 'bn')
-  let line_text = string(getbufline(bufnr('%'), test_line))
+  let l:view = winsaveview()
+  let l:test_line = search('  \(' . join(s:test_words, '\)\|\(') . '\)', 'bn')
+  let l:line_text = string(getbufline(bufnr('%'), l:test_line))
 
-  let test_position = match(line_text, "\\(def test\\)\\|\\(test\\)\\|\\(scenario\\)")
-  let starting_whitespace = strpart(line_text, 2, test_position -2)
-  echo starting_whitespace
+  let l:test_position = match(l:line_text, "\\(" . join(s:test_words, "\\)\\|\\(") . "\\)")
+  let l:starting_whitespace = strpart(l:line_text, 2, l:test_position -2)
+  echo l:starting_whitespace
 
-  call append(test_line - 1, [starting_whitespace . 'focus'])
-  call winrestview(view)
+  call append(l:test_line - 1, [l:starting_whitespace . s:decorator])
+  call winrestview(l:view)
 endfunction
 
 function! RemoveFocusHere()
-  let test_line = search('  \(def test_\w\)\|\(test\ \"\)\|\(scenario\ \"\)', 'bn')
-  let focus_line = search('^\s*focus', 'bn')
+  let l:test_line = search('  \(' . join(s:test_words, '\)\|\(') . '\)', 'bn')
+  let l:focus_line = search('^\s*' . s:decorator, 'bn')
 
-  let view = winsaveview()
-  if (focus_line == test_line - 1)
-    exe focus_line .'d'
+  let l:view = winsaveview()
+  if (l:focus_line == l:test_line - 1)
+    exe l:focus_line .'d'
   endif
-  call winrestview(view)
+  call winrestview(l:view)
 endfunction
 
 command! AddFocusHere call AddFocusHere()
