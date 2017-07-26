@@ -16,6 +16,8 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'jonathanfilip/vim-lucius'
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+  Plug 'jcqvisser/focus_toggle'
+  Plug 'mrtazz/simplenote.vim'
 call plug#end()
 
 Setup nvim_fixes
@@ -31,5 +33,9 @@ Setup misc
 SetupPlugin nerdtree
 SetupPlugin bufexplorer
 SetupPlugin fzf
+SetupPlugin simplenote_password
 
-
+" TODO: cleanup
+" in ruby augroup
+iabbrev xzt binding.pry
+"nnooremap <leader>n :Explore<CR>iii
