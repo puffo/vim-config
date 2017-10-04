@@ -1,6 +1,4 @@
 " remove the pipe characters from dividers
-set fillchars+=vert:\ 
+set fillchars+=vert:\|
 
-colorscheme lucius
-LuciusLightHighContrast
-
+colorscheme nova
