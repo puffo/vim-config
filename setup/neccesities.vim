@@ -26,3 +26,6 @@ elseif has('unix')
 	"more might be required
 	set clipboard=unnamedplus
 end
+
+" MOUSE
+set mouse=a

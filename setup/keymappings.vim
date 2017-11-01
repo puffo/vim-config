@@ -3,6 +3,8 @@
 
 let mapleader = "\<Space>"
 
+nnoremap ; :
+
 " SPLIT NAVIGATION
 nnoremap <C-j> <C-W><C-j>
 nnoremap <C-k> <C-W><C-k>
@@ -17,6 +19,8 @@ end
 " TABS
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>o :tabonly<CR>
+nnoremap <leader>j :tabprevious<CR>
+nnoremap <leader>k :tabnext<CR>
 
 " SEARCH HIGHLIGHT
 nnoremap <leader>h :noh<CR>

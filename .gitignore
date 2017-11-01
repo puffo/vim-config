@@ -1,3 +1,4 @@
 .git
+.netrwhist
 plugged/
 plugin_setup/simplenote_password.vim
