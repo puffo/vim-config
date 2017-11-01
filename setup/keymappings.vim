@@ -3,6 +3,7 @@
 
 let mapleader = "\<Space>"
 
+" SEMI COLON -> COLON
 nnoremap ; :
 
 " SPLIT NAVIGATION

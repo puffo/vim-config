@@ -20,7 +20,10 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'trevordmiller/nova-vim'
   Plug 'mxw/vim-jsx'
   Plug 'othree/html5.vim'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'pangloss/vim-javascript'
+  Plug 'prettier/vim-prettier'
 call plug#end()
 
 Setup nvim_fixes
