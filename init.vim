@@ -1,14 +1,17 @@
 let g:setup_path = '~/.config/nvim'
 
-function CurrySauce(file, setup_file)
+function! CurrySauce(file, setup_file)
   exec "source" . g:setup_path . "/" . a:setup_file . "/" . a:file . ".vim"
 endfunction
 command! -nargs=1 Setup call CurrySauce(<q-args>, "setup")
 command! -nargs=1 SetupPlugin call CurrySauce(<q-args>, "plugin_setup")
 
 call plug#begin(g:setup_path . '/plugged')
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rails'
+  Plug 'janko-m/vim-test'
   Plug 'slim-template/vim-slim'
   Plug 'jlanzarotta/bufexplorer'
   Plug 'vim-airline/vim-airline'
