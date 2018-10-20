@@ -11,6 +11,7 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-rhubarb'
   Plug 'janko-m/vim-test'
   Plug 'slim-template/vim-slim'
   Plug 'jlanzarotta/bufexplorer'
@@ -27,6 +28,8 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'terryma/vim-multiple-cursors'
   Plug 'pangloss/vim-javascript'
   Plug 'prettier/vim-prettier'
+  Plug 'kshenoy/vim-signature'
+  " Plug 'w0rp/ale'
 call plug#end()
 
 Setup nvim_fixes
@@ -41,6 +44,7 @@ Setup misc
 SetupPlugin nerdtree
 SetupPlugin bufexplorer
 SetupPlugin fzf
+SetupPlugin nerdcommenter
 
 " TODO: cleanup
 " in ruby augroup
