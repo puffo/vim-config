@@ -29,7 +29,7 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'prettier/vim-prettier'
   Plug 'kshenoy/vim-signature'
-  " Plug 'w0rp/ale'
+  Plug 'w0rp/ale'
 call plug#end()
 
 Setup nvim_fixes
@@ -42,6 +42,7 @@ Setup syntax_tweaks
 Setup misc
 
 SetupPlugin nerdtree
+SetupPlugin ale
 SetupPlugin bufexplorer
 SetupPlugin fzf
 SetupPlugin nerdcommenter
