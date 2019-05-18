@@ -20,7 +20,6 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'jonathanfilip/vim-lucius'
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
   Plug 'jcqvisser/focus_toggle'
-  Plug 'mrtazz/simplenote.vim'
   Plug 'trevordmiller/nova-vim'
   Plug 'mxw/vim-jsx'
   Plug 'othree/html5.vim'
@@ -30,6 +29,7 @@ call plug#begin(g:setup_path . '/plugged')
   Plug 'prettier/vim-prettier'
   Plug 'kshenoy/vim-signature'
   Plug 'w0rp/ale'
+  Plug 'vimwiki/vimwiki'
 call plug#end()
 
 Setup nvim_fixes
@@ -50,6 +50,7 @@ SetupPlugin nerdcommenter
 " TODO: cleanup
 " in ruby augroup
 iabbrev xzt binding.pry
+iabbrev whodat puts "#" * 90;puts caller;puts "#" * 90;
 "nnooremap <leader>n :Explore<CR>iii
 "
 let g:python2_host_prog = '/usr/local/bin/python'
