@@ -1,7 +1,7 @@
 " remove the pipe characters from dividers
 set fillchars+=vert:\|
 
-colorscheme nova
+colorscheme lucius
 
 " show 80 char line limit
-" set cc=80
+set cc=80
