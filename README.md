@@ -9,7 +9,7 @@ Intended to work across Vim and NeoVim.
 ### Vim
 - Clone this repo somewhere and make a symlink from `~/.vimrc` to `init.vim`:
 ``` sh
-git clone https://github.com/jcqvisser/vim-config.git ~/.config/nvim`
+git clone https://github.com/puffo/vim-config.git ~/.config/nvim`
 ln -sf ~/.config/nvim/init.vim ~/.vimrc
 ```
 - Edit `g:setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
@@ -17,6 +17,6 @@ ln -sf ~/.config/nvim/init.vim ~/.vimrc
 ### NeoVim
 Clone this repo into the nvim config folder:
 ``` sh
-git clone https://github.com/jcqvisser/vim-config.git ~/.config/nvim`
+git clone https://github.com/puffo/vim-config.git ~/.config/nvim`
 ```
 - Edit `g:setup_path` in `init.vim` to point to where the repo was cloned if you didn't put it in `~/.config/nvim`
