@@ -3,6 +3,9 @@
 
 let mapleader = "\<Space>"
 
+" FILE PATH
+:nmap <leader>m :let @+ = expand("%")<CR>
+
 " SEMI COLON -> COLON
 nnoremap ; :
 
@@ -40,3 +43,12 @@ endif
 " Taken from http://learnvimscriptthehardway.stevelosh.com/chapters/07.html
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" EASY ALIGN
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" QUICK GETAWAY
+" Exit nvim
+nnoremap <leader>w :tabonly<CR>
+nnoremap <leader>q :q<CR>
